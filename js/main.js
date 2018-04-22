@@ -90,7 +90,7 @@ var context = {
         // 静态属性继承
         Object.setPrototypeOf(_app, appSupperObject);
         let proxyApp = new Proxy(_app, appProxyHandle);
-        this.appList.set(_appName, proxyApp);
+        this.appList.set(proxyApp.name, proxyApp);
     },
     getApp: function (_appName) {
         return this.appList.get(_appName);
