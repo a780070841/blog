@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -17,200 +18,62 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-     
+
+    <script src="js/utils.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/component.js"></script>
     <script src="js/index.js"></script>
 </head>
-<body exj-app="index">
 
+<body>
+    <div id="app">
 
-    <section class="header-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1><strong>小风的博客 </strong></h1>
-                    <h4>java开发工程师</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--HOME SECTION END-->
+        <blog-head></blog-head>
+        <!--HOME SECTION END-->
+        <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" title="网站模板">网站模板</a></div>
 
-    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="blog-main">
-                        <div class="heading-blog">
-                            The security is main concern while developing applications
-                        </div>
-                         <a href="singlepost.html">
-                        <img src="assets/img/1.jpg" class="img-responsive img-rounded" />
-                             </a>
-                        <div class="blog-info">
-                            <span class="label label-primary">Posted on 26th November 2014</span>
-                            <span class="label label-success">In Technology</span>
-                            <span class="label label-danger">By Jhon</span>
-                            <span class="label label-info">
-                                <i class="fa fa-thumbs-up"></i>+ 10
-                        <i class="fa fa-thumbs-down"></i>-3
-                            </span>
-                        </div>
-                        <div class="blog-txt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Fusce nec tellus non diam feugiat commodo. Sed auctor mauris a tristique imperdiet. 
-                        Nullam egestas sapien non lectus suscipit, quis tristique odio imperdiet.
-                         Nullam elit lacus, tincidunt eget faucibus eget, vestibulum venenatis metus.
-                        Praesent efficitur quam aliquam mauris sagittis, vel lacinia risus luctus. Ut vitae bibendum ipsum.
-                        </div>
-                    </div>
-                    <!--BLOG ONE END -->
-                    <div class="blog-main">
-                        <div class="heading-blog">
-                            The security is main concern while developing applications
-                        </div>
-                         <a href="singlepost.html">
-                        <img src="assets/img/2.jpg" class="img-responsive img-rounded" />
-                             </a>
-                        <div class="blog-info">
-                            <span class="label label-primary">Posted on 26th November 2014</span>
-                            <span class="label label-success">In Technology</span>
-                            <span class="label label-danger">By Jhon</span>
-                            <span class="label label-info">
-                                <i class="fa fa-thumbs-up"></i>+ 10
-                        <i class="fa fa-thumbs-down"></i>-3
-                            </span>
-                        </div>
-                        <div class="blog-txt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Fusce nec tellus non diam feugiat commodo. Sed auctor mauris a tristique imperdiet. 
-                        Nullam egestas sapien non lectus suscipit, quis tristique odio imperdiet.
-                         Nullam elit lacus, tincidunt eget faucibus eget, vestibulum venenatis metus.
-                        Praesent efficitur quam aliquam mauris sagittis, vel lacinia risus luctus. Ut vitae bibendum ipsum.
-                        </div>
-                    </div>
-                     <!--BLOG TWO END -->
-                    <div class="blog-main">
-                        <div class="heading-blog">
-                            The security is main concern while developing applications
-                        </div>
-                        <a href="singlepost.html">
-                        <img src="assets/img/3.jpg" class="img-responsive img-rounded" />
-                            </a>
-                        <div class="blog-info">
-                            <span class="label label-primary">Posted on 26th November 2014</span>
-                            <span class="label label-success">In Technology</span>
-                            <span class="label label-danger">By Jhon</span>
-                            <span class="label label-info">
-                                <i class="fa fa-thumbs-up"></i>+ 10
-                        <i class="fa fa-thumbs-down"></i>-3
-                            </span>
-                        </div>
-                        <div class="blog-txt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Fusce nec tellus non diam feugiat commodo. Sed auctor mauris a tristique imperdiet. 
-                        Nullam egestas sapien non lectus suscipit, quis tristique odio imperdiet.
-                         Nullam elit lacus, tincidunt eget faucibus eget, vestibulum venenatis metus.
-                        Praesent efficitur quam aliquam mauris sagittis, vel lacinia risus luctus. Ut vitae bibendum ipsum.
-                        </div>
-                    </div>
-                     <!--BLOG THREE END -->
-                    <nav>
-                        <ul class="pagination">
-                            <li class="disabled"><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
-                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">2 <span class="sr-only"></span></a></li>
-                            <li><a href="#">3 <span class="sr-only"></span></a></li>
-                            <li><a href="#">4 <span class="sr-only"></span></a></li>
-                            <li><a href="#">5 <span class="sr-only"></span></a></li>
-                            <li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
-                        </ul>
-                    </nav>
-                     <!--PAGING  END -->
-                </div>
-                <div class="col-md-3">
-
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <strong>Main Categories</strong>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">104</span>
-                            Technology 
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">34</span>
-                            Blogging 
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">10</span>
-                            Information 
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">50</span>
-                            Security 
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Other Categories</strong>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">104</span>
-                            Technology 
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">34</span>
-                            Blogging 
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">10</span>
-                            Information 
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">50</span>
-                            Security 
-                        </li>
-                    </ul>
-                    <br />
-
-                    <ul class="list-group">
-                        <li class="list-group-item">Advrtisements
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <img src="assets/img/ad1.jpg" class="img-responsive" />
-                            </a>
-                            <br />
-                            <a href="#">
-                                <img src="assets/img/ad2.jpg" class="img-responsive" />
-                            </a>
-                        </li>
-                    </ul>
-
-                    <br />
-                    <div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Subscribe For Updates</h3>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="blog-main" v-for="blogHead in blogHeads">
+                            <div class="heading-blog">
+                                The security is main concern while developing applications
                             </div>
-                            <div class="panel-body">
-                                <input type="text" class="form-control" placeholder="Your Email" />
-                                <hr />
-                                <a href="#" class="btn btn-info btn-sm btn-block">subscribe</a>
+                            <a :href="'singlepost.html?blogid=' + blogHead.blogId" v-if="blogHead.headImg">
+                                <img :src="blogHead.headImg" class="img-responsive img-rounded" />
+                            </a>
+                            <div class="blog-info">
+                                <span class="label label-primary">{{blogHead.createTime.format("yyyy-MM-dd hh:mm:ss")}}</span>
+                                <span class="label label-success">In {{blogHead.classify}}</span>
+                                <span class="label label-danger">By {{blogHead.author }}</span>
+                                <span class="label label-info">
+                                <i class="fa fa-thumbs-up"></i>+ {{blogHead.praise}}
+                        <i class="fa fa-thumbs-down"></i>-{{blogHead.letdown}}
+                            </span>
+                            </div>
+                            <div class="blog-txt">
+                                {{blogHead.abstract}}
                             </div>
                         </div>
+                        <!--BLOG HEAD LIST -->
+
+                        <nav>
+                            <ul class="pagination">
+                                <li class="disabled"><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
+                                <li v-bind:class="{ active: page.isActive }" v-for="page in pages"><a @click="query(page.num)">{{page.num}} <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
+                            </ul>
+                        </nav>
+                        <!--PAGING  END -->
                     </div>
+                    <blog-category></blog-category>
                 </div>
-
-
-
             </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
 </body>
+
 </html>
