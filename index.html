@@ -18,7 +18,7 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="js/utils.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -40,7 +40,7 @@
                     <div class="col-md-9">
                         <div class="blog-main" v-for="blogHead in blogHeads">
                             <div class="heading-blog">
-                                The security is main concern while developing applications
+                                {{blogHead.title}}
                             </div>
                             <a :href="'singlepost.html?blogid=' + blogHead.blogId" v-if="blogHead.headImg">
                                 <img :src="blogHead.headImg" class="img-responsive img-rounded" />
@@ -50,11 +50,11 @@
                                 <span class="label label-success">In {{blogHead.classify}}</span>
                                 <span class="label label-danger">By {{blogHead.author }}</span>
                                 <span class="label label-info">
-                                <i class="fa fa-thumbs-up"></i>+ {{blogHead.praise}}
-                        <i class="fa fa-thumbs-down"></i>-{{blogHead.letdown}}
-                            </span>
+                                    <i class="fa fa-thumbs-up"></i>+ {{blogHead.praise}}
+                                    <i class="fa fa-thumbs-down"></i>-{{blogHead.letdown}}
+                                </span>
                             </div>
-                            <div class="blog-txt">
+                            <div class="blog-txt" v-html="blogHead.abstract">
                                 {{blogHead.abstract}}
                             </div>
                         </div>

@@ -3,16 +3,51 @@ Vue.component('my-component', {
     template: '<div>A custom component!</div>'
 });
 Vue.component('blog-head', {
-    template: `<section class="header-section" style="margin-bottom:30px">
+    template: `    <div style="background-color: rgb(111, 15, 189);margin-bottom: 20px">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
-                <h1><strong>小风的博客 </strong></h1>
-                <h4>java开发工程师</h4>
+            <div class="col-md-12">
+                <nav class="navbar navbar-default " role="navigation" style="margin-top: 30px">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">小风博客</a>
+                        </div>
+
+                        <div class="navbar-form navbar-left" style="width: 500px">
+                            <div class=" input-group ">
+                                <input type="text" v-model="searchKey" class="form-control">
+                                <span class="input-group-btn">
+                                            <button class="btn btn-default" @click="search" type="button">Go!</button>
+                                        </span></div>
+                        </div>
+                        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="index.html">首页</a></li>
+                                <li><a href="index.html">博客目录</a></li>
+                                <li>
+
+                                </li>
+
+                            </ul>
+
+                            <!-- /input-group -->
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
-</section>`
+    </div>`,
+    data() {
+        return {
+            searchKey: ""
+        }
+    },
+    methods: {
+        search() {
+            console.log(this.searchKey);
+        }
+    }
 });
 let categories = [{
     name: "Technology",

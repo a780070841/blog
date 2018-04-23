@@ -1,12 +1,4 @@
-// context.createApp({
-//     name:"index",
-//     init:function(_i){
-//         console.log("start"+_i);
-//     }
-// });
-
 $(document).ready(() => {
-
     let blogHeads = [{
         title: "The security is main concern while developing applications",
         blogId: "blogId",
@@ -18,25 +10,9 @@ $(document).ready(() => {
         letdown: 31,
         abstract: marked('# Marked in the browser\n\nRendered by **marked**.')
     }]
-
-    let pages = [{
-        num: 1,
-        isActive: false
-    }, {
-        num: 2,
-        isActive: false
-    }, {
-        num: 3,
-        isActive: true
-    }]
-
-
     var app = new Vue({
-        el: '#app',
-        data: {
-            blogHeads: blogHeads,
-            pages: pages
-        },
+        el: '#edit',
+        data: {},
         methods: {
             query(e) {
                 console.log(e);
@@ -44,4 +20,5 @@ $(document).ready(() => {
         }
     });
 
+    var editor = new EpicEditor({ basePath: 'lib/epiceditor' }).load();
 })
