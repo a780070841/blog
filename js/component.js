@@ -3,27 +3,27 @@ Vue.component('my-component', {
     template: '<div>A custom component!</div>'
 });
 Vue.component('blog-head', {
-    template: `    <div style="background-color: rgb(111, 15, 189);margin-bottom: 20px">
+    template: `    <div style="margin-bottom: 20px">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <nav class="navbar navbar-default " role="navigation" style="margin-top: 30px">
+                <nav class="navbar navbar-default " role="navigation" style="background-color: rgb(111, 15, 189);margin-top: 30px">
                     <div class="container-fluid">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="#">小风博客</a>
+                        <div class="navbar-header " style="">
+                            <a class="navbar-brand" style="color:white"  href="#">小风博客</a>
                         </div>
 
                         <div class="navbar-form navbar-left" style="width: 500px">
                             <div class=" input-group ">
                                 <input type="text" v-model="searchKey" class="form-control">
                                 <span class="input-group-btn">
-                                            <button class="btn btn-default" @click="search" type="button">Go!</button>
+                                            <button class="btn btn-default" @click="search"style="color: rgb(111, 15, 189);" type="button">Go!</button>
                                         </span></div>
                         </div>
-                        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                        <div class="collapse navbar-collapse" id="example-navbar-collapse" >
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a href="index.html">首页</a></li>
-                                <li><a href="index.html">博客目录</a></li>
+                                <li ><a href="index.html" style="color:white">首页</a></li>
+                                <li><a href="index.html" style="color:white">博客目录</a></li>
                                 <li>
 
                                 </li>
@@ -70,7 +70,7 @@ Vue.component('blog-category', {
             <strong>Main Categories</strong>
         </li>
         <li class="list-group-item" v-for="cat in categories">
-            <span class="badge">{{cat.blogNum}}</span> {{cat.name}}
+            <span class="badge" style="background-color: rgb(111, 15, 189);">{{cat.blogNum}}</span> {{cat.name}}
         </li>
     </ul>
     <br />

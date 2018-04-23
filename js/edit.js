@@ -17,7 +17,7 @@ $(document).ready(() => {
             query(e) {
                 console.log(e);
             },
-            import (e) {
+            importFile (e) {
 
             }
         }
