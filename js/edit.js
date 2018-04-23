@@ -16,6 +16,9 @@ $(document).ready(() => {
         methods: {
             query(e) {
                 console.log(e);
+            },
+            import (e) {
+
             }
         }
     });
